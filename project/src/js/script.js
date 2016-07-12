@@ -14,6 +14,7 @@ function init() {
  var frame3blueText = new createjs.Bitmap("images/frame3-blue-text.png");
  var frame3ltdOffer = new createjs.Bitmap("images/frame3-ltd-offer.png");
  var frame3greyText = new createjs.Bitmap("images/frame3-grey-text.png");
+ var frame3sheen = new createjs.Bitmap("images/frame3-sheen.png");
 
  skyLogo.y = 200;
  products.y = 110;
@@ -26,6 +27,15 @@ function init() {
  frame2stamp.y = -150;
  frame3button.y = 185;
  frame3button.alpha = 0;
+ frame3gradientText.alpha = 0;
+ frame3blueText.y = 85;
+ frame3blueText.alpha = 0;
+ frame3ltdOffer.y = 120;
+ frame3ltdOffer.alpha = 0;
+ frame3greyText.y = 155;
+ frame3greyText.alpha = 0;
+ frame3sheen.y = 185;
+ frame3sheen.alpha = 0;
 
  stage.addChild(background);
  stage.addChild(skyLogo);
@@ -36,6 +46,11 @@ function init() {
  stage.addChild(frame2greyText);
  stage.addChild(frame2stamp);
  stage.addChild(frame3button);
+ stage.addChild(frame3gradientText);
+ stage.addChild(frame3blueText);
+ stage.addChild(frame3ltdOffer);
+ stage.addChild(frame3greyText);
+ stage.addChild(frame3sheen);
 
  createjs.Ticker.addEventListener("tick", handleTick);
 
@@ -53,6 +68,11 @@ function init() {
 		 createjs.Tween.get(frame2stamp).wait(6000).to({y:60}, 1000, createjs.Ease.bounceOut).wait(2000).to({alpha: 0},1000);
 		 // frame 3 animation
 		 createjs.Tween.get(frame3button).wait(10000).to({alpha: 1});
+		 createjs.Tween.get(frame3gradientText).wait(11000).to({alpha: 1}, 1000);
+		 createjs.Tween.get(frame3blueText).wait(12000).to({alpha: 1}, 1000);
+		 createjs.Tween.get(frame3ltdOffer).wait(13000).to({alpha: 1}, 1000);
+		 createjs.Tween.get(frame3greyText).wait(14000).to({alpha: 1}, 1000);
+		 createjs.Tween.get(frame3sheen).wait(15000).to({alpha: 1}, 1000);
  }
 
  }
